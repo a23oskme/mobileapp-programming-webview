@@ -1,6 +1,12 @@
 
 # Rapport
 
+
+Ändrade namn på appen genom att ändra variabeln som innehöll namnet i 'strings.xml'
+Gav appen tillåtelse till internet genom att lägga till '<uses-permission android:name="android.permission.INTERNET" />' i 'AndroidManifest.xml'
+Skapade ett webview element i 'MainActivity.java' och länkade till en hemsida. 
+
+
 **Skriv din rapport här!**
 
 _Du kan ta bort all text som finns sedan tidigare_.

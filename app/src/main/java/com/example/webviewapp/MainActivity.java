@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -24,6 +25,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // lägg till webview element
+        WebView webView = new WebView(this);
+
+        setContentView(webView);
+
+        // ladda en hemsida
+        webView.loadUrl("https://tv4.se");
+
 
         /*
         * Rename your App. Tip: Values->Strings
