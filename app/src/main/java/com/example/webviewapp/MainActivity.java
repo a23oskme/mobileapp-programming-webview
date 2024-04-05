@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // lägg till webview element
-        WebView webView = new WebView(this);
+        //WebView webView = new WebView(this);
 
-        setContentView(webView);
+        //setContentView(webView);
 
         // ladda en hemsida
-        webView.loadUrl("https://tv4.se");
+        //webView.loadUrl("https://tv4.se");
 
 
         /*
