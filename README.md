@@ -3,16 +3,61 @@
 
 
 Ändrade namn på appen genom att ändra variabeln som innehöll namnet i 'strings.xml'
-Gav appen tillåtelse till internet genom att lägga till '<uses-permission android:name="android.permission.INTERNET" />' i 'AndroidManifest.xml'
-Skapade webview i layout filen, activity_main.xml
-Skapade private member variabel och instansierade den i onCreate() 
-Lokaliserade WebView elementet med WebView ID
-Skapade en ny instans av webview client med: 'WebViewClient webViewClient = new WebViewClient();'
-Kopplade webviewclient till webivew med: 'myWebView.setWebViewClient(webViewClient);'
-Hämtade inställningar för webview och aktiverade javascript
-Skapade en hemsida som asset, skapade struktur i html-dokumentet
-Skapade metoder för att visa intern och extern hemsida 
+Gav appen tillåtelse till internet genom att lägga till koden nedanför i 'AndroidManifest.xml'
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
 
+- Skapade ett webview element i layout filen, activity_main.xml
+```
+    <WebView
+        android:id="@+id/my_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+```
+
+- Skapade private member variabel och instansierade den i onCreate()
+```
+    private WebView myWebView;
+```
+
+- Lokaliserade WebView elementet med WebView ID
+- Kopplade webviewclient till webivew med
+- Hämtade inställningar för webview och aktiverade javascript
+Dom tre punkterna ovanför gjordes med koden nedanför
+
+```
+        // lokalisera webview elementet från layout filen
+        myWebView = findViewById(R.id.my_webview);
+
+        // koppla webviewclient till webview
+        myWebView.setWebViewClient(new WebViewClient());
+
+        // hämta inställningar för webview
+        WebSettings webSettings = myWebView.getSettings();
+
+        // aktivera javascript
+        webSettings.setJavaScriptEnabled(true);
+```
+
+- Skapade en hemsida som asset och döpte den till hemsida.html 
+- Skapade struktur i html-dokumentet 
+
+- Färdigställde metoder för att visa intern och extern hemsida med 'loadUrl'-funktionen och 
+inkluderade länkarna. 
+```
+    public void showExternalWebPage(){
+        // TODO: Add your code for showing external web page here
+        // ladda extern webbsida
+        myWebView.loadUrl("https://his.se");
+    }
+
+    public void showInternalWebPage(){
+        // TODO: Add your code for showing internal web page here
+        // ladda intern webbsida
+        myWebView.loadUrl("file:///android_asset/hemsida.html");
+    }
+```
 
 **Skriv din rapport här!**
 

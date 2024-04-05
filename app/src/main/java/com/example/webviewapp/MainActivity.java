@@ -16,13 +16,11 @@ public class MainActivity extends AppCompatActivity {
     private WebView myWebView;
 
     public void showExternalWebPage(){
-        // TODO: Add your code for showing external web page here
         // ladda extern webbsida
         myWebView.loadUrl("https://his.se");
     }
 
     public void showInternalWebPage(){
-        // TODO: Add your code for showing internal web page here
         // ladda intern webbsida
         myWebView.loadUrl("file:///android_asset/hemsida.html");
     }
@@ -37,11 +35,7 @@ public class MainActivity extends AppCompatActivity {
         // lokalisera webview elementet från layout filen
         myWebView = findViewById(R.id.my_webview);
 
-        // skapa en ny instans av webview
-        //WebViewClient webViewClient = new WebViewClient();
-
         // koppla webviewclient till webview
-        //myWebView.setWebViewClient(webViewClient);
         myWebView.setWebViewClient(new WebViewClient());
 
         // hämta inställningar för webview
