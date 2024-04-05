@@ -8,6 +8,10 @@ Gav appen tillåtelse till internet genom att lägga till '<uses-permission andr
 Skapade webview i layout filen, activity_main.xml
 Skapade private member variabel och instansierade den i onCreate() 
 Lokaliserade WebView elementet med WebView ID
+Skapade en ny instans av webview client med: 'WebViewClient webViewClient = new WebViewClient();'
+Kopplade webviewclient till webivew med: 'myWebView.setWebViewClient(webViewClient);'
+Hämtade inställningar för webview och aktiverade javascript
+
 
 **Skriv din rapport här!**
 

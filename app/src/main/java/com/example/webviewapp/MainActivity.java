@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -28,7 +30,20 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // lokalisera webview elementet från layout filen
         myWebView = findViewById(R.id.min_sida);
+
+        // skapa en ny instans av webview
+        WebViewClient webViewClient = new WebViewClient();
+
+        // koppla webviewclient till webview
+        myWebView.setWebViewClient(webViewClient);
+
+        // hämta inställningar för webview
+        WebSettings webSettings = myWebView.getSettings();
+
+        // aktivera javascript
+        webSettings.setJavaScriptEnabled(true);
 
         // lägg till webview element
         //WebView webView = new WebView(this);
