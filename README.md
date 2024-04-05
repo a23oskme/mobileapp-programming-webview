@@ -11,6 +11,7 @@ Lokaliserade WebView elementet med WebView ID
 Skapade en ny instans av webview client med: 'WebViewClient webViewClient = new WebViewClient();'
 Kopplade webviewclient till webivew med: 'myWebView.setWebViewClient(webViewClient);'
 Hämtade inställningar för webview och aktiverade javascript
+Skapade en hemsida som asset, skapade struktur i html-dokumentet
 
 
 **Skriv din rapport här!**
