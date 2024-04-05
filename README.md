@@ -16,7 +16,7 @@ Gav appen tillåtelse till internet genom att lägga till koden nedanför i 'And
         android:layout_height="match_parent" />
 ```
 
-- Skapade private member variabel och instansierade den i onCreate()
+- Skapade private member variabel i main-metoden
 ```
     private WebView myWebView;
 ```
