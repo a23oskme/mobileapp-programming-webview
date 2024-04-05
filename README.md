@@ -12,6 +12,7 @@ Skapade en ny instans av webview client med: 'WebViewClient webViewClient = new 
 Kopplade webviewclient till webivew med: 'myWebView.setWebViewClient(webViewClient);'
 Hämtade inställningar för webview och aktiverade javascript
 Skapade en hemsida som asset, skapade struktur i html-dokumentet
+Skapade metod för att visa intern hemsida 
 
 
 **Skriv din rapport här!**
