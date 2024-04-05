@@ -25,7 +25,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <WebView
-        android:id="@+id/min_sida"
+        android:id="@+id/my_webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

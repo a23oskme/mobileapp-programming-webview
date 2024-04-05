@@ -4,7 +4,6 @@
 
 Ändrade namn på appen genom att ändra variabeln som innehöll namnet i 'strings.xml'
 Gav appen tillåtelse till internet genom att lägga till '<uses-permission android:name="android.permission.INTERNET" />' i 'AndroidManifest.xml'
-// TA BORT - Skapade ett webview element i 'MainActivity.java' och länkade till en hemsida. 
 Skapade webview i layout filen, activity_main.xml
 Skapade private member variabel och instansierade den i onCreate() 
 Lokaliserade WebView elementet med WebView ID
@@ -12,7 +11,7 @@ Skapade en ny instans av webview client med: 'WebViewClient webViewClient = new 
 Kopplade webviewclient till webivew med: 'myWebView.setWebViewClient(webViewClient);'
 Hämtade inställningar för webview och aktiverade javascript
 Skapade en hemsida som asset, skapade struktur i html-dokumentet
-Skapade metod för att visa intern hemsida 
+Skapade metoder för att visa intern och extern hemsida 
 
 
 **Skriv din rapport här!**

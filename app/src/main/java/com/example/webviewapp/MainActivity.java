@@ -17,10 +17,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
+        // ladda extern webbsida
+        myWebView.loadUrl("https://his.se");
     }
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
+        // ladda intern webbsida
+        myWebView.loadUrl("file:///android_asset/hemsida.html");
     }
 
     @Override
@@ -31,27 +35,20 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // lokalisera webview elementet från layout filen
-        myWebView = findViewById(R.id.min_sida);
+        myWebView = findViewById(R.id.my_webview);
 
         // skapa en ny instans av webview
-        WebViewClient webViewClient = new WebViewClient();
+        //WebViewClient webViewClient = new WebViewClient();
 
         // koppla webviewclient till webview
-        myWebView.setWebViewClient(webViewClient);
+        //myWebView.setWebViewClient(webViewClient);
+        myWebView.setWebViewClient(new WebViewClient());
 
         // hämta inställningar för webview
         WebSettings webSettings = myWebView.getSettings();
 
         // aktivera javascript
         webSettings.setJavaScriptEnabled(true);
-
-        // lägg till webview element
-        //WebView webView = new WebView(this);
-
-        //setContentView(webView);
-
-        // ladda en hemsida
-        //webView.loadUrl("https://tv4.se");
 
 
         /*
@@ -80,9 +77,6 @@ public class MainActivity extends AppCompatActivity {
         */
     }
 
-    private void showInternalWebPage(String fileName) {
-        myWebView.loadUrl("file:///android_asset/" + fileName);
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -100,11 +94,13 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_external_web) {
             Log.d("==>","Will display external web page");
+            showExternalWebPage();
             return true;
         }
 
         if (id == R.id.action_internal_web) {
             Log.d("==>","Will display internal web page");
+            showInternalWebPage();
             return true;
         }
 
