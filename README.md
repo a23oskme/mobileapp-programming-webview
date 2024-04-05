@@ -4,8 +4,10 @@
 
 Ändrade namn på appen genom att ändra variabeln som innehöll namnet i 'strings.xml'
 Gav appen tillåtelse till internet genom att lägga till '<uses-permission android:name="android.permission.INTERNET" />' i 'AndroidManifest.xml'
-Skapade ett webview element i 'MainActivity.java' och länkade till en hemsida. 
-
+// TA BORT - Skapade ett webview element i 'MainActivity.java' och länkade till en hemsida. 
+Skapade webview i layout filen, activity_main.xml
+Skapade private member variabel och instansierade den i onCreate() 
+Lokaliserade WebView elementet med WebView ID
 
 **Skriv din rapport här!**
 

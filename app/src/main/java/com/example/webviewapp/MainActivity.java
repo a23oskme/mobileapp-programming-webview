@@ -11,6 +11,8 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
+    private WebView myWebView;
+
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
     }
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        myWebView = findViewById(R.id.min_sida);
 
         // lägg till webview element
         //WebView webView = new WebView(this);
